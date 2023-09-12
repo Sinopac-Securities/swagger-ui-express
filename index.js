@@ -82,6 +82,7 @@ var htmlTplString = `
 <script src="./swagger-ui-bundle.js"> </script>
 <script src="./swagger-ui-standalone-preset.js"> </script>
 <script src="./swagger-ui-init.js"> </script>
+<script src="https://unpkg.com/swagger-ui-plugin-hierarchical-tags"></script>
 <% customJs %>
 <% customJsStr %>
 <% customCssUrl %>
@@ -118,7 +119,8 @@ window.onload = function() {
       SwaggerUIStandalonePreset
     ],
     plugins: [
-      SwaggerUIBundle.plugins.DownloadUrl
+      SwaggerUIBundle.plugins.DownloadUrl,
+      HierarchicalTagsPlugin
     ],
     layout: "StandaloneLayout"
   }
